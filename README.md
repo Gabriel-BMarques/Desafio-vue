@@ -28,3 +28,47 @@ Seu objetivo é demonstrar, através de código, como essa reatividade pode ser 
 - Clareza e qualidade na explicação das soluções implementadas.
 
 Esperamos que esta atividade lhe permita demonstrar sua habilidade com Vue.js e sua capacidade de transformar código legado em soluções modernas e eficientes. Boa sorte!
+
+## Solução
+
+1. Remoção da Dependência de CommonJS (scripts/index.js)
+
+**Melhoria**: Eliminei a necessidade do arquivo scripts/index.js, migrando toda a lógica de manipulação de estado e eventos para o componente Vue (index.vue).
+
+**Motivo**: Centralizar a lógica no componente Vue melhora a manutenção do código, facilita a compreensão e aproveita os recursos nativos de reatividade do Vue.js.
+
+2. Utilização de Reatividade do Vue.js
+
+**Melhoria**: Utilizei reactive e ref para gerenciar o estado e referências de forma reativa.
+
+**Motivo**: A reatividade do Vue.js permite que as mudanças de estado sejam automaticamente refletidas na interface do usuário, eliminando a necessidade de manipulação manual do DOM.
+
+3. Implementação de Métodos Vue.js
+
+**Melhoria**: Transformei os métodos de manipulação de DOM e eventos em métodos do Vue.js dentro do componente index.vue.
+
+**Motivo**: Encapsular a lógica de manipulação de eventos dentro de métodos Vue.js melhora a clareza e a integração com o ciclo de vida do Vue.
+
+4. Integração da Biblioteca Coloris
+
+**Melhoria**: Configurei e inicializei a biblioteca Coloris diretamente no onMounted do componente Vue.
+
+**Motivo**: Inicializar bibliotecas de terceiros no momento certo do ciclo de vida do componente garante que os elementos DOM estejam disponíveis e prontos para interação.
+
+5. Validação e Tratamento de Erros
+
+**Melhoria**: Adicionei validação para garantir que um número de telefone seja fornecido quando a ação for whatsapp.
+
+**Motivo**: Melhorar a experiência do usuário e evitar erros ao garantir que todas as informações necessárias estejam disponíveis antes de executar ações.
+
+6. Envio de Dados com fetch
+
+**Melhoria**: Implementei a lógica de envio de dados do template utilizando fetch para fazer uma requisição POST para uma API.
+
+**Motivo**: Integrar a funcionalidade de salvamento de dados em um endpoint remoto permite que os templates sejam persistidos de forma segura e eficiente.
+
+7. Estado de Carregamento
+
+**Melhoria**: Adicionei um indicador de estado de carregamento (state.loading) durante o processo de salvamento.
+
+**Motivo**: Informar o usuário sobre o estado atual do processo de salvamento melhora a usabilidade e a experiência do usuário.
